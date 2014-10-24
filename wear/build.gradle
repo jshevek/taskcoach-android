@@ -6,7 +6,7 @@ android {
     buildToolsVersion "20.0.0"
 
     defaultConfig {
-        applicationId "uk.co.droidinactu.taskcoachforandroid"
+        applicationId "uk.co.droidinactu.taskcoach"
         minSdkVersion 20
         targetSdkVersion 20
         versionCode 1
@@ -17,6 +17,9 @@ android {
             runProguard false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+    lintOptions {
+        abortOnError false
     }
 }
 

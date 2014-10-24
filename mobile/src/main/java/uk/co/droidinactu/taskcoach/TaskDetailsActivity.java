@@ -51,41 +51,94 @@ public class TaskDetailsActivity extends Activity implements ActionBar.OnNavigat
         return true;
     }
 
+    private DescriptionFragment descFrag=null;
+    private DatesFragment datesFrag=null;
+    private PreReqFragment preReqFrag=null;
+    private ProgressFragment progressFrag=null;
+    private CategoriesFragment catgFrag=null;
+    private BudgetFragment budgetFrag=null;
+    private EffortFragment effortFrag=null;
+    private NotesFragment notesFrag=null;
+    private AttachmentsFragment attachFrag=null;
+    private AppearenceFragment appearFrag=null;
+
     @Override
     public boolean onNavigationItemSelected(final int position, final long id) {
         // When the given dropdown item is selected, show its contents in the
         // container view.
+    Bundle taskBundle = new Bundle();
+        taskBundle.putString("TaskId",task.id);
         switch (position) {
-            case 0:
-                getFragmentManager().beginTransaction().replace(R.id.container, new DescriptionFragment()).commit();
-                break;
-            case 1:
-                getFragmentManager().beginTransaction().replace(R.id.container, new DatesFragment()).commit();
-                break;
-            case 2:
-                getFragmentManager().beginTransaction().replace(R.id.container, new PreReqFragment()).commit();
-                break;
-            case 3:
-                getFragmentManager().beginTransaction().replace(R.id.container, new ProgressFragment()).commit();
-                break;
-            case 4:
-                getFragmentManager().beginTransaction().replace(R.id.container, new CategoriesFragment()).commit();
-                break;
-            case 5:
-                getFragmentManager().beginTransaction().replace(R.id.container, new BudgetFragment()).commit();
-                break;
-            case 6:
-                getFragmentManager().beginTransaction().replace(R.id.container, new EffortFragment()).commit();
-                break;
-            case 7:
-                getFragmentManager().beginTransaction().replace(R.id.container, new NotesFragment()).commit();
-                break;
-            case 8:
-                getFragmentManager().beginTransaction().replace(R.id.container, new AttachmentsFragment()).commit();
-                break;
-            case 9:
-                getFragmentManager().beginTransaction().replace(R.id.container, new AppearenceFragment()).commit();
-                break;
+            case 0:{
+                if (descFrag==null){
+                    descFrag=new DescriptionFragment();
+                    descFrag.setArguments(taskBundle);
+                }
+                getFragmentManager().beginTransaction().replace(R.id.container, descFrag).commit();
+                break;}
+            case 1:{
+                if (datesFrag==null){
+                    datesFrag=new DatesFragment();
+                    datesFrag.setArguments(taskBundle);
+                }
+                getFragmentManager().beginTransaction().replace(R.id.container,datesFrag).commit();
+                break;}
+            case 2:{
+                if (preReqFrag==null){
+                    preReqFrag=new PreReqFragment();
+                    descFrag.setArguments(taskBundle);
+                }
+                getFragmentManager().beginTransaction().replace(R.id.container, preReqFrag).commit();
+                break;}
+            case 3:{
+                if (progressFrag==null){
+                    progressFrag=new ProgressFragment();
+                    descFrag.setArguments(taskBundle);
+                }
+                getFragmentManager().beginTransaction().replace(R.id.container,progressFrag).commit();
+                break;}
+            case 4:{
+                if (catgFrag==null){
+                    catgFrag=new CategoriesFragment();
+                    descFrag.setArguments(taskBundle);
+                }
+                getFragmentManager().beginTransaction().replace(R.id.container, catgFrag).commit();
+                break;}
+            case 5:{
+                if (budgetFrag==null){
+                    budgetFrag=new BudgetFragment();
+                    descFrag.setArguments(taskBundle);
+                }
+                getFragmentManager().beginTransaction().replace(R.id.container, budgetFrag).commit();
+                break;}
+            case 6:{
+                if (effortFrag==null){
+                    effortFrag=new EffortFragment();
+                    descFrag.setArguments(taskBundle);
+                }
+                getFragmentManager().beginTransaction().replace(R.id.container,effortFrag).commit();
+                break;}
+            case 7:{
+                if (notesFrag==null){
+                    notesFrag=new NotesFragment();
+                    descFrag.setArguments(taskBundle);
+                }
+                getFragmentManager().beginTransaction().replace(R.id.container, notesFrag).commit();
+                break;}
+            case 8:{
+                if (attachFrag==null){
+                    attachFrag=new AttachmentsFragment();
+                    descFrag.setArguments(taskBundle);
+                }
+                getFragmentManager().beginTransaction().replace(R.id.container, attachFrag).commit();
+                break;}
+            case 9:{
+                if (appearFrag==null){
+                    appearFrag=new AppearenceFragment();
+                    descFrag.setArguments(taskBundle);
+                }
+                getFragmentManager().beginTransaction().replace(R.id.container, appearFrag).commit();
+                break;}
         }
         return true;
     }
@@ -111,8 +164,9 @@ public class TaskDetailsActivity extends Activity implements ActionBar.OnNavigat
         Debug.stopMethodTracing();
     }
 
-    public class AppearenceFragment extends Fragment {
+    public static class AppearenceFragment extends Fragment {
         private final String LOG_TAG = ProgressFragment.class.getSimpleName() + "::";
+        private Task task = null;
 
         public AppearenceFragment() {
         }
@@ -121,6 +175,9 @@ public class TaskDetailsActivity extends Activity implements ActionBar.OnNavigat
         public View onCreateView(final LayoutInflater inflater, final ViewGroup container, final Bundle savedInstanceState) {
             final View rootView = inflater.inflate(R.layout.fragment_task_details_appear, container, false);
 
+            Bundle taskIdBundle=getArguments();
+            task = MyApplication.getInstance().getDataModel().getTaskFile(0).getTask(taskIdBundle.getString("TaskId"));
+
             updateTaskDetails();
             return rootView;
         }
@@ -132,8 +189,9 @@ public class TaskDetailsActivity extends Activity implements ActionBar.OnNavigat
         }
     }
 
-    public class AttachmentsFragment extends Fragment {
+    public static  class AttachmentsFragment extends Fragment {
         private final String LOG_TAG = ProgressFragment.class.getSimpleName() + "::";
+        private Task task = null;
 
         public AttachmentsFragment() {
         }
@@ -142,6 +200,9 @@ public class TaskDetailsActivity extends Activity implements ActionBar.OnNavigat
         public View onCreateView(final LayoutInflater inflater, final ViewGroup container, final Bundle savedInstanceState) {
             final View rootView = inflater.inflate(R.layout.fragment_task_details_attch, container, false);
 
+            Bundle taskIdBundle=getArguments();
+            task = MyApplication.getInstance().getDataModel().getTaskFile(0).getTask(taskIdBundle.getString("TaskId"));
+
             updateTaskDetails();
             return rootView;
         }
@@ -153,8 +214,9 @@ public class TaskDetailsActivity extends Activity implements ActionBar.OnNavigat
         }
     }
 
-    public class BudgetFragment extends Fragment {
+    public static  class BudgetFragment extends Fragment {
         private final String LOG_TAG = ProgressFragment.class.getSimpleName() + "::";
+        private Task task = null;
         private EditText tabBudget_budget;
 
         public BudgetFragment() {
@@ -165,6 +227,9 @@ public class TaskDetailsActivity extends Activity implements ActionBar.OnNavigat
             final View rootView = inflater.inflate(R.layout.fragment_task_details_budget, container, false);
 
             tabBudget_budget = (EditText) rootView.findViewById(R.id.tabBudget_budget);
+
+            Bundle taskIdBundle=getArguments();
+            task = MyApplication.getInstance().getDataModel().getTaskFile(0).getTask(taskIdBundle.getString("TaskId"));
 
             updateTaskDetails();
             return rootView;
@@ -178,8 +243,9 @@ public class TaskDetailsActivity extends Activity implements ActionBar.OnNavigat
         }
     }
 
-    public class CategoriesFragment extends Fragment {
+    public static  class CategoriesFragment extends Fragment {
         private final String LOG_TAG = ProgressFragment.class.getSimpleName() + "::";
+        private Task task = null;
 
         public CategoriesFragment() {
         }
@@ -187,6 +253,9 @@ public class TaskDetailsActivity extends Activity implements ActionBar.OnNavigat
         @Override
         public View onCreateView(final LayoutInflater inflater, final ViewGroup container, final Bundle savedInstanceState) {
             final View rootView = inflater.inflate(R.layout.fragment_task_details_categories, container, false);
+
+            Bundle taskIdBundle=getArguments();
+            task = MyApplication.getInstance().getDataModel().getTaskFile(0).getTask(taskIdBundle.getString("TaskId"));
 
             updateTaskDetails();
             return rootView;
@@ -199,8 +268,9 @@ public class TaskDetailsActivity extends Activity implements ActionBar.OnNavigat
         }
     }
 
-    public class DatesFragment extends Fragment {
+    public static  class DatesFragment extends Fragment {
         private final String LOG_TAG = DatesFragment.class.getSimpleName() + "::";
+        private Task task = null;
 
         private EditText tabDates_actualstart;
         private EditText tabDates_completion;
@@ -223,6 +293,9 @@ public class TaskDetailsActivity extends Activity implements ActionBar.OnNavigat
             tabDates_reminder = (EditText) rootView.findViewById(R.id.tabDates_reminder);
             tabDates_recurrence = (EditText) rootView.findViewById(R.id.tabDates_recurrence);
 
+            Bundle taskIdBundle=getArguments();
+            task = MyApplication.getInstance().getDataModel().getTaskFile(0).getTask(taskIdBundle.getString("TaskId"));
+
             updateTaskDetails();
             return rootView;
         }
@@ -237,8 +310,9 @@ public class TaskDetailsActivity extends Activity implements ActionBar.OnNavigat
         }
     }
 
-    public class DescriptionFragment extends Fragment {
+    public static  class DescriptionFragment extends Fragment {
         private final String LOG_TAG = DescriptionFragment.class.getSimpleName() + "::";
+        private Task task = null;
 
         private EditText tabDescription_creationDate;
         private EditText tabDescription_description;
@@ -257,6 +331,9 @@ public class TaskDetailsActivity extends Activity implements ActionBar.OnNavigat
             tabDescription_creationDate = (EditText) rootView.findViewById(R.id.tabDescription_creationDate);
             tabDescription_modificationDate = (EditText) rootView.findViewById(R.id.tabDescription_modificationDate);
 
+         Bundle taskIdBundle=getArguments();
+            task = MyApplication.getInstance().getDataModel().getTaskFile(0).getTask(taskIdBundle.getString("TaskId"));
+
             updateTaskDetails();
             return rootView;
         }
@@ -272,8 +349,9 @@ public class TaskDetailsActivity extends Activity implements ActionBar.OnNavigat
         }
     }
 
-    public class EffortFragment extends Fragment {
+    public static  class EffortFragment extends Fragment {
         private final String LOG_TAG = ProgressFragment.class.getSimpleName() + "::";
+        private Task task = null;
 
         public EffortFragment() {
         }
@@ -282,6 +360,9 @@ public class TaskDetailsActivity extends Activity implements ActionBar.OnNavigat
         public View onCreateView(final LayoutInflater inflater, final ViewGroup container, final Bundle savedInstanceState) {
             final View rootView = inflater.inflate(R.layout.fragment_task_details_effort, container, false);
 
+            Bundle taskIdBundle=getArguments();
+            task = MyApplication.getInstance().getDataModel().getTaskFile(0).getTask(taskIdBundle.getString("TaskId"));
+
             updateTaskDetails();
             return rootView;
         }
@@ -293,8 +374,9 @@ public class TaskDetailsActivity extends Activity implements ActionBar.OnNavigat
         }
     }
 
-    public class NotesFragment extends Fragment {
+    public static  class NotesFragment extends Fragment {
         private final String LOG_TAG = ProgressFragment.class.getSimpleName() + "::";
+        private Task task = null;
 
         public NotesFragment() {
         }
@@ -303,6 +385,9 @@ public class TaskDetailsActivity extends Activity implements ActionBar.OnNavigat
         public View onCreateView(final LayoutInflater inflater, final ViewGroup container, final Bundle savedInstanceState) {
             final View rootView = inflater.inflate(R.layout.fragment_task_details_notes, container, false);
 
+            Bundle taskIdBundle=getArguments();
+            task = MyApplication.getInstance().getDataModel().getTaskFile(0).getTask(taskIdBundle.getString("TaskId"));
+
             updateTaskDetails();
             return rootView;
         }
@@ -314,8 +399,9 @@ public class TaskDetailsActivity extends Activity implements ActionBar.OnNavigat
         }
     }
 
-    public class PreReqFragment extends Fragment {
+    public static  class PreReqFragment extends Fragment {
         private final String LOG_TAG = PreReqFragment.class.getSimpleName() + "::";
+        private Task task = null;
 
         public PreReqFragment() {
         }
@@ -335,8 +421,9 @@ public class TaskDetailsActivity extends Activity implements ActionBar.OnNavigat
         }
     }
 
-    public class ProgressFragment extends Fragment {
+    public static  class ProgressFragment extends Fragment {
         private final String LOG_TAG = ProgressFragment.class.getSimpleName() + "::";
+        private Task task = null;
         private EditText tabProgress_percent;
 
         public ProgressFragment() {
@@ -347,6 +434,9 @@ public class TaskDetailsActivity extends Activity implements ActionBar.OnNavigat
             final View rootView = inflater.inflate(R.layout.fragment_task_details_progress, container, false);
 
             tabProgress_percent = (EditText) rootView.findViewById(R.id.tabProgress_percent);
+
+            Bundle taskIdBundle=getArguments();
+            task = MyApplication.getInstance().getDataModel().getTaskFile(0).getTask(taskIdBundle.getString("TaskId"));
 
             updateTaskDetails();
             return rootView;

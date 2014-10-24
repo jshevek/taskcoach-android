@@ -1,4 +1,4 @@
-package uk.co.droidinactu.taskcoachforandroid;
+package uk.co.droidinactu.taskcoach;
 
 import android.app.Activity;
 import android.os.Bundle;
