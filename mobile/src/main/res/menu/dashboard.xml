@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="uk.co.droidinactu.taskcoach.Dashboard">
+
+    <item
+        android:id="@+id/action_open_file"
+        android:icon="@drawable/fileopen"
+        android:orderInCategory="100"
+        android:title="@string/action_open_file"/>
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/pref_taskcoach_settings_title"/>
+</menu>

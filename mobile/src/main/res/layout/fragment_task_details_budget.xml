@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                tools:context="uk.co.droidinactu.taskcoach.TaskDetailsActivity$PlaceholderFragment">
+
+    <EditText
+        android:id="@+id/tabBudget_budget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:ems="10"
+        android:hint="@string/tabBudget_budget"/>
+
+    <EditText
+        android:id="@+id/tabBudget_timespent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tabBudget_budget"
+        android:ems="10"
+        android:hint="@string/tabBudget_timespent"/>
+
+    <EditText
+        android:id="@+id/tabBudget_budgetleft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tabBudget_timespent"
+        android:ems="10"
+        android:hint="@string/tabBudget_budgetleft"
+        android:inputType="date"/>
+
+    <EditText
+        android:id="@+id/tabBudget_hourlyfee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tabBudget_budgetleft"
+        android:ems="10"
+        android:hint="@string/tabBudget_hourlyfee"
+        android:inputType="date"/>
+
+    <EditText
+        android:id="@+id/tabBudget_fixedfee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tabBudget_hourlyfee"
+        android:ems="10"
+        android:hint="@string/tabBudget_fixedfee"
+        android:inputType="date"/>
+
+    <EditText
+        android:id="@+id/tabBudget_revenue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tabBudget_fixedfee"
+        android:ems="10"
+        android:hint="@string/tabBudget_revenue"
+        android:inputType="date"/>
+
+</RelativeLayout>

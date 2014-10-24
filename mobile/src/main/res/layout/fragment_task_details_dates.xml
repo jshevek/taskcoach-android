@@ -1,0 +1,77 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                tools:context="uk.co.droidinactu.taskcoach.TaskDetailsActivity$PlaceholderFragment">
+
+    <EditText
+        android:id="@+id/tabDates_plannedstart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_weight="1"
+        android:ems="10"
+        android:hint="@string/tabDates_plannedstart"/>
+
+    <EditText
+        android:id="@+id/tabDates_due"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tabDates_plannedstart"
+        android:layout_weight="1"
+        android:ems="10"
+        android:hint="@string/tabDates_due"/>
+
+    <EditText
+        android:id="@+id/tabDates_actualstart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tabDates_due"
+        android:ems="10"
+        android:hint="@string/tabDates_actualstart"
+        android:inputType="date"/>
+
+    <EditText
+        android:id="@+id/tabDates_completion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tabDates_actualstart"
+        android:ems="10"
+        android:hint="@string/tabDates_completion"
+        android:inputType="date"/>
+
+    <EditText
+        android:id="@+id/tabDates_reminder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tabDates_completion"
+        android:ems="10"
+        android:hint="@string/tabDates_reminder"
+        android:inputType="date"/>
+
+    <EditText
+        android:id="@+id/tabDates_recurrence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tabDates_reminder"
+        android:ems="10"
+        android:hint="@string/tabDates_recurrence"
+        android:inputType="date"/>
+
+</RelativeLayout>

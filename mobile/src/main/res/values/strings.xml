@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TaskCoach for Android</string>
+    <string name="title_section1">Task List</string>
+    <string name="title_section2">Task List</string>
+    <string name="title_section3">Task List</string>
+    <string name="title_details_desc">Description</string>
+    <string name="title_details_dates">Dates</string>
+    <string name="title_details_prereq">PreRequisites</string>
+    <string name="title_details_progress">Progress</string>
+    <string name="title_details_categories">Categories</string>
+    <string name="title_details_budget">Budget</string>
+    <string name="title_details_effort">Effort</string>
+    <string name="title_details_notes">Notes</string>
+    <string name="title_details_attachments">Attachments</string>
+    <string name="title_details_appearence">Appearance</string>
+    <string name="action_open_file">Open File</string>
+    <string name="action_open_localfile">Open Local File</string>
+    <string name="action_open_dropboxfile">Open Dropbox File</string>
+    <string name="action_settings">Settings</string>
+    <string name="file_chooser_title">Pick a TaskCoach File</string>
+    <string name="navigation_drawer_open">Open Drawer</string>
+    <string name="navigation_drawer_close">Close Drawer</string>
+
+    <!-- Treeview -->
+    <string name="simple_menu_name">Simple Adapter</string>
+    <string name="simple_menu_condensed">Simple</string>
+    <string name="fancy_menu_name">Fancy Menu</string>
+    <string name="fancy_menu_condensed">Fancy</string>
+    <string name="expand_all_menu">Expand all</string>
+    <string name="expand_all_condensed">Expand All</string>
+    <string name="collapsible_menu_enable">Enable collapsible</string>
+    <string name="collapsible_condensed_enable">Enable collapsible</string>
+    <string name="collapsible_menu_disable">Disable collapsible</string>
+    <string name="collapsible_condensed_disable">Disable collapsible</string>
+    <string name="collapse_all_menu">Collapse all</string>
+    <string name="collapse_all_condesed">Collapse all</string>
+    <string name="expand_menu">Expand</string>
+    <string name="expand_menu_condensed">Expand</string>
+    <string name="delete_menu">Delete</string>
+    <string name="delete_menu_condensed">Delete</string>
+    <string name="title_activity_task_details">TaskDetailsActivity</string>
+
+    <!-- Task Details - Description -->
+    <string name="tabDescription_title">Description</string>
+    <string name="tabDescription_subject">Subject n/a</string>
+    <string name="tabDescription_description">Description n/a</string>
+    <string name="tabDescription_creationDate">Created n/a</string>
+    <string name="tabDescription_modificationDate">Modified n/a</string>
+
+    <!-- Task Details - Dates -->
+    <string name="tabDates_title">Preqrequisites</string>
+    <string name="tabDates_plannedstart">Planned Start Date n/a</string>
+    <string name="tabDates_due">Due Date n/a</string>
+    <string name="tabDates_actualstart">Actual Start Date n/a</string>
+    <string name="tabDates_completion">Completion Date n/a</string>
+    <string name="tabDates_reminder">Reminder Date n/a</string>
+    <string name="tabDates_recurrence">Recurrence n/a</string>
+
+    <!-- Task Details - Preqrequisites -->
+    <string name="tabPreReq_title">Preqrequisites</string>
+
+    <!-- Task Details - Progress -->
+    <string name="tabProgress_title">Progress</string>
+    <string name="tabProgress_percent">Percent Complete</string>
+
+    <!-- Task Details - Categories -->
+    <string name="tabCategories_title">Categories</string>
+
+    <!-- Task Details - Budget -->
+    <string name="tabBudget_title">Budget</string>
+    <string name="tabBudget_budget">Budget</string>
+    <string name="tabBudget_timespent">Time Spent</string>
+    <string name="tabBudget_budgetleft">Budget Left</string>
+    <string name="tabBudget_hourlyfee">Hourly Fee</string>
+    <string name="tabBudget_fixedfee">Fixed Fee</string>
+    <string name="tabBudget_revenue">Revenue</string>
+
+    <!-- Task Details - Effort -->
+    <string name="tabEffort_title">Effort</string>
+
+    <!-- Task Details - Notes -->
+    <string name="tabNotes_title">Notes</string>
+
+    <!-- Task Details - Attachments -->
+    <string name="tabAttachments_title">Attachments</string>
+
+    <!-- Task Details - Appearance -->
+    <string name="tabAppearance_title">Appearance</string>
+
+    <!-- Settings -->
+    <string name="pref_taskcoach_settings_title">Settings</string>
+    <string name="pref_taskcoach_hide_completed">Completed Tasks</string>
+    <string name="pref_taskcoach_hide_completed_on">Hide Completed Tasks</string>
+    <string name="pref_taskcoach_hide_completed_off">Show Completed Tasks</string>
+    <string name="pref_taskcoach_hide_completed_summary">Hide Completed</string>
+    <string name="hello_world">Hello world!</string>
+
+</resources>
