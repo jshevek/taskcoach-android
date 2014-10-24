@@ -33,3 +33,6 @@ Todo:
    * add wiki
    * ~~add source code~~
  * ~~open from google drive~~
+
+
+to join the Beta you need to join the Google+ community [https://plus.google.com/u/0/communities/101173336981053169864]
