@@ -8,14 +8,27 @@ android {
         applicationId "uk.co.droidinactu.taskcoach"
         minSdkVersion 14
         targetSdkVersion 20
-        versionCode 1
-        versionName "1.0"
+        versionCode 23
+        versionName "0.23.0"
     }
     buildTypes {
+        debug {
+            applicationIdSuffix ".debug"
+        }
         release {
             runProguard false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
     }
 }
 
