@@ -1,0 +1,27 @@
+Description
+-----------
+
+Open your Task Coach task files on your android device wherever and whenever you need to.
+
+Current features:
+• Works with files from Task Coach ver 1.3.36
+• Integration with Google Drive opening your task files
+
+Planned Features
+• Edit your tasks on your device
+• Add new tasks from your phone or tablet
+• Multiple Task Coach files can be opened at once
+• View your tasks on google calendar
+• Manage your tasks even while being offline
+• Plan your days ahead with visual scheduling
+• Home screen widgets
+• Notifications on your Sony Smartwatch
+• Google Now and DashClock integration
+• Order your tasks by due date/name/create time/priority
+
+
+Contains In App ads which can be removed with an In App Purchase
+
+
+Promo Text
+----------
